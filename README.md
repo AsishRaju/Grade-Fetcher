@@ -21,7 +21,7 @@
 - **But what if the user wants to get all results of his classmate's and compare himself with others?**
 - That's where my **Grade-Fetcher-App** come's to play.
 - Insted of manually entering each roll-no my **Grade-Fetcher-App** will do that for you.
-- User enters **Starting Roll-no** ,  **Ending Roll-no** , **Semester** and chooses the **Excel-File** to save the marks.
+- User enters **Starting Roll-no** ,  **Ending Roll-no** , **Semester** and chooses the **Excel-File-Location** to save the marks.
 - **Grade-Fetcher-App** will check for **Validity** of all input's and progress of validation can be seen in the **Progress Bar**
 - Once all the inputs are verified then **Pyqt5** send this data to **Selenium** web drivers.
 - Now **Selenium** open a chrome window and connects to **[Portal]** and starts entering data into the text-field and clicks on **Get-Result** button automatically.
