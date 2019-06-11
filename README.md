@@ -3,7 +3,7 @@
 ## What It Does❓
 - Gets complete Section (Class) results in one click without manually entering each student roll-no.
 - With the help of easily understandable UI, user enters the mentioned details and clicks on **GET DATA** button.
-- **Grade-Fetcher-App** then saves the data obtained in excel files. 
+- **Grade-Fetcher-App** then saves the data obtained in excel file. 
 ## Tools I Used🛠
 - The whole processing from **backend** to **frontend** is taken care by **[Python]**.
 - **[Pyqt5]** offers a great frontend library for **Python**,and this is what i made my UI.
