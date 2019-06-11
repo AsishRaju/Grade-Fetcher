@@ -1,6 +1,9 @@
 # Grade-Fetcher✔
-**Get Complete Class Results In One Click😱**
 ![](useless/show.png)
+## What It Does❓
+- Gets complete class results in one click without manually enetering each student roll-no.
+- With the help of easily understandable UI, user enters the mentioned details and clicks on **GET DATA** button.
+- **Grade-Fetcher-App** then saves the data obtained in excel files. 
 ## Tools I Used🛠
 - The whole processing from **backend** to **frontend** is taken care by **[Python]**.
 - **[Pyqt5]** offers a great frontend library for **Python**,and this is what i made my UI.
