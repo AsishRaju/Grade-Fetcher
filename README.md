@@ -50,7 +50,7 @@
 note-i compare myself with others as a competitive spirit which help me improve myself but not everyone thinks the same so don't think i treat other from their qualities they show.
 Thank You.
 ```
-
+[Video]: <https://youtu.be/zqiqtzCW5tM>
 [Instagram]: <https://www.instagram.com/iamash1sh/>
 [Python]: <https://www.python.org/>
 [Pyqt5]: <https://pypi.org/project/PyQt5/>
