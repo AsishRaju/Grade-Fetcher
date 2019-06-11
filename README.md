@@ -29,3 +29,9 @@
 - And passes this data to **[Openpyxl]** which saves data into user selected **Excel-File**.
 - This process keeps on repeating until  **Ending Roll-no** is reached.
 - After getting data for all the **Roll-no** the browser gets closed, which is indication that its safe to open the excel file and check the data that **Grade-Fetcher-App** got.
+
+[Python]: <https://www.python.org/>
+[Pyqt5]: <https://pypi.org/project/PyQt5/>
+[Selenium]: <https://www.seleniumhq.org/>
+[Openpyxl]: <https://openpyxl.readthedocs.io/en/stable/#>
+[Portal]: <https://doeresults.gitam.edu/onlineresults/pages/Newgrdcrdinput1.aspx>
