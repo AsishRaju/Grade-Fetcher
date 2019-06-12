@@ -47,7 +47,7 @@
 - Yes,it is open source you can clone and change code to your need.
 - for any clarification on code or want to contribute contact vashish888@gmail.com or Dm me on [Instagram].
  ```bash
-note-i compare myself with others as a competitive spirit which help me improve myself but not everyone thinks the same so don't think i treat other from their qualities they show.
+note-i compare myself with others as a competitive spirit which help me improve myself but not everyone thinks the same so don't think i treat other based on their grades.
 Thank You.
 ```
 [Video]: <https://youtu.be/zqiqtzCW5tM>
