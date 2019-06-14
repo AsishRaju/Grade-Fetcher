@@ -46,10 +46,16 @@
 ## How To Contribute🤝 
 - Yes,it is open source you can clone and change code to your need.
 - for any clarification on code or want to contribute contact vashish888@gmail.com or Dm me on [Instagram].
+
+## Update-v1.0.1
+- Added ability to fetch all the subject marks and also account for elective subjects;
+- No need to fill excel file before hand for heading , my app will do it for you;
+
  ```bash
 note-i compare myself with others as a competitive spirit which help me improve myself but not everyone thinks the same so don't think i treat other based on their grades.
 Thank You.
 ```
+
 [Video]: <https://youtu.be/zqiqtzCW5tM>
 [Instagram]: <https://www.instagram.com/iamash1sh/>
 [Python]: <https://www.python.org/>
