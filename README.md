@@ -1,7 +1,7 @@
 # Grade-Fetcher✔
 ![](useless/show.png)
 ## What It Does❓
-- Gets complete Section (Class) results in one click without manually entering each student roll-no from **[Portal]**.
+- Gets complete Section (Class)/Batch results in one click without manually entering each student roll-no from **[Portal]**.
 - With the help of easily understandable UI, user enters the mentioned details and clicks on **GET DATA** button.
 - **Grade-Fetcher-App** then saves the data obtained in excel file. 
 ## Tools I Used🛠
