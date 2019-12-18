@@ -105,16 +105,12 @@ class Ui_MainWindow(object):
         global pathx
         pathx=fileName[0]
         self.error_box.setText("Checking-length")
-        time.sleep(1)
         self.progressBar.setProperty("value", 20)
         self.error_box.setText("Checking-SEM-Validity")
-        time.sleep(1)
         self.progressBar.setProperty("value", 42)
         self.error_box.setText("Checking-path")
-        time.sleep(1)
         self.progressBar.setProperty("value", 57)
         self.error_box.setText("Connecting...")
-        time.sleep(1)
         self.progressBar.setProperty("value", 78)
         if((len(self.srollno.text())==12) and (len(self.erollno.text())==12) and (int(self.sembox.text())>0) and (pathx.find('xlsx')!=-1)):
             self.error_box.setStyleSheet("color: rgb(0, 255, 0);\n""font: 90 14pt \"Myanmar Text\";")
@@ -134,47 +130,51 @@ class Ui_MainWindow(object):
             self.progressBar.setProperty("value", 0)
 
     def run(self):
-        sr=int(self.srollno.text())
-        er=int(self.erollno.text())
-        self.error_box.setText("All-ok")
-        roll_no= sr
-        workbook=openpyxl.load_workbook(pathx) 
-        sheet=workbook.active 
-        r=2
-        driver_path=str(Path(__file__).parent.absolute())+"\\chromedriver.exe"
-        browser = webdriver.Chrome(driver_path) #chrome-driver
-        browser.get('https://doeresults.gitam.edu/onlineresults/pages/Newgrdcrdinput1.aspx') #redirecting-to-university-results-portal
-        while roll_no<=er:
-            sem_drop_box=Select(browser.find_element_by_xpath("//*[@id='cbosem']")) #selecting-semester-drop-box
-            sem_drop_box.select_by_visible_text(self.sembox.text()) #select-semester
-            roll_no_box=browser.find_element_by_xpath("//*[@id='txtreg']") #selecting-roll-no-box
-            roll_no_box.clear() #clearing-unwanted-text
-            roll_no_box.send_keys(roll_no) #filling-roll-no
-            browser.find_element_by_xpath("//*[@id='Button1']").click() #selecting-get-result-butoon-and-clicking-it
-            time.sleep(1)
-            if(browser.current_url == 'https://doeresults.gitam.edu/onlineresults/pages/View_Result_Grid.aspx'):
+        # sr=int(self.srollno.text())
+        # er=int(self.erollno.text())
+        sr=121810300000
+        r=0
+        for i in range(1,19):
+            sr=sr+1000
+            er=sr+69
+            self.error_box.setText("All-ok")
+            roll_no=sr
+            workbook=openpyxl.load_workbook(pathx) 
+            sheet=workbook.active 
+            r=r+2
+            driver_path=str(Path(__file__).parent.absolute())+"\\chromedriver.exe"
+            browser = webdriver.Chrome(driver_path) #chrome-driver
+            browser.get('https://doeresults.gitam.edu/onlineresults/pages/Newgrdcrdinput1.aspx') #redirecting-to-university-results-portal
+            while roll_no<=er:
+                sem_drop_box=Select(browser.find_element_by_xpath("//*[@id='cbosem']")) #selecting-semester-drop-box
+                sem_drop_box.select_by_visible_text(self.sembox.text()) #select-semester
+                roll_no_box=browser.find_element_by_xpath("//*[@id='txtreg']") #selecting-roll-no-box
+                roll_no_box.clear() #clearing-unwanted-text
+                roll_no_box.send_keys(roll_no) #filling-roll-no
+                browser.find_element_by_xpath("//*[@id='Button1']").click() #selecting-get-result-butoon-and-clicking-it
+                if(browser.current_url == 'https://doeresults.gitam.edu/onlineresults/pages/View_Result_Grid.aspx'):
 
-                name=browser.find_element_by_xpath("//*[@id='lblname']")
-                roll=browser.find_element_by_xpath("//*[@id='lblregdno']")
-                cgpa=browser.find_element_by_xpath("//*[@id='lblgpa']")
-                gpa=browser.find_element_by_xpath("//*[@id='lblcgpa']")
-                
-                sheet.cell(row=r,column=1).value=name.text
-                sheet.cell(row=r,column=2).value=roll.text
-                sheet.cell(row=r, column=3).value=cgpa.text
-                sheet.cell(row=r, column=4).value=gpa.text
-                roll_no=roll_no+1
-                r=r+1
-                browser.back()
-            else:
-                sheet.cell(row=r, column=1).value="NOT-FOUND"
-                sheet.cell(row=r, column=2).value="NOT-FOUND"
-                sheet.cell(row=r, column=3).value="NOT-FOUND"
-                sheet.cell(row=r, column=4).value="NOT-FOUND"
-                r=r+1
-                roll_no=roll_no+1
-        workbook.save(pathx)
-        browser.close()
+                    name=browser.find_element_by_xpath("//*[@id='lblname']")
+                    roll=browser.find_element_by_xpath("//*[@id='lblregdno']")
+                    cgpa=browser.find_element_by_xpath("//*[@id='lblgpa']")
+                    gpa=browser.find_element_by_xpath("//*[@id='lblcgpa']")
+                    
+                    sheet.cell(row=r,column=1).value=name.text
+                    sheet.cell(row=r,column=2).value=roll.text
+                    sheet.cell(row=r, column=3).value=cgpa.text
+                    sheet.cell(row=r, column=4).value=gpa.text
+                    roll_no=roll_no+1
+                    r=r+1
+                    browser.back()
+                else:
+                    sheet.cell(row=r, column=1).value="NOT-FOUND"
+                    sheet.cell(row=r, column=2).value="NOT-FOUND"
+                    sheet.cell(row=r, column=3).value="NOT-FOUND"
+                    sheet.cell(row=r, column=4).value="NOT-FOUND"
+                    r=r+1
+                    roll_no=roll_no+1
+            workbook.save(pathx)
+            browser.close()
 
 
         #print(self.srollno.text())
