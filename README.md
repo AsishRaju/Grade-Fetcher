@@ -40,7 +40,7 @@
 - **A lot of code optimization is required which can make app perform better**
 ## Work In Progress🚧 
 - Working on **Code optimization**.
-- Adding feature to get the **Whole university result of a paticular department for a paticular Semester**.
+- ~~Adding feature to get the **Whole university result of a paticular department for a paticular Semester**.~~ ✅
 - Adding feature to generate **Rank of the student based on their CGPA**.
 - Working on a **RESPONSIVE UI**.
 ## How To Contribute🤝 
